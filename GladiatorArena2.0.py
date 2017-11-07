@@ -69,7 +69,7 @@ def playerAttack(Class,enemyHp,attackBonus):
     if playerChoice == 2:
         attackDmg = damages[1]+attackBonus
         attackChance = randint(0,100)
-        if attackChance <=50:
+        if attackChance <=70:
             enemyHp = enemyHp-attackDmg
             print("---------------------------")
             print("You deal",attackDmg,"damage")
@@ -79,7 +79,7 @@ def playerAttack(Class,enemyHp,attackBonus):
     if playerChoice == 3:
         attackDmg = damages[2]+attackBonus
         attackChance = randint(0,100)
-        if attackChance <=30:
+        if attackChance <=40:
             enemyHp = enemyHp-attackDmg
             print("---------------------------")
             print("You deal",attackDmg,"damage")
@@ -187,7 +187,7 @@ def fight():
 def mainMenu():
     ready = "no"
     while ready == "no":
-        print("Welcome to....")
+        print("Welcome to Gladiator Arena 2.0 a python re-make\nThe goal is to beat 9 enemies and the defending champion")
         age = int(input("Enter your age to play: "))
         if age >=18:
             ready = input("Are you ready?(yes/no)\n")
