@@ -138,7 +138,7 @@ def fight():
         if goToShop == "yes":
             while True:
                 print("\nYou have",gold,"gold pieces")
-                purchase=int(input("pick an item:\n1=+3hp\n2=+1attackBonus\n3=+15Dodge\n4=Leave shop\n"))
+                purchase=int(input("pick an item:\n1)+3hp Cost 3 gold\n2)+1attack Cost 2 gold\n3)+15Dodge Cost 3 gold\n4)Leave shop\n"))
                 if purchase ==1:
                     if gold >=3:
                         gold = gold-3
@@ -189,6 +189,7 @@ def fight():
     enemyHp=100
     enemyDamages=[10,15,20]
     enemyChances=[80,70,50]
+    enemyType=4
     enemy(Class,hpBonus,attackBonus,dodgeBonus,enemyHp,enemyDamages,enemyType,enemyChances)
     print("you win!")
     deathScreen() 
