@@ -138,7 +138,7 @@ def fight():
         if goToShop == "yes":
             while True:
                 print("\nYou have",gold,"gold pieces")
-                purchase=int(input("pick an item:\n1)+3hp Cost 3 gold\n2)+1attack Cost 2 gold\n3)+15Dodge Cost 3 gold\n4)Leave shop\n"))
+                purchase=int(input("pick an item:\n1)+3hp Cost 3 gold\n2)+1attack Cost 2 gold\n3)+5Dodge Cost 3 gold\n4)Leave shop\n"))
                 if purchase ==1:
                     if gold >=3:
                         gold = gold-3
@@ -156,7 +156,7 @@ def fight():
                 if purchase ==3:
                     if gold >=3:
                         gold = gold-3
-                        dodgeBonus = dodgeBonus +15
+                        dodgeBonus = dodgeBonus +5
                         print("Purchased!")
                     else:
                         print("Not enough gold")
