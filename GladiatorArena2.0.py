@@ -138,18 +138,18 @@ def fight():
         if goToShop == "yes":
             while True:
                 print("\nYou have",gold,"gold pieces")
-                purchase=int(input("pick an item:\n1=+5hp\n2=+2attackBonus\n3=+15Dodge\n4=Leave shop\n"))
+                purchase=int(input("pick an item:\n1=+3hp\n2=+1attackBonus\n3=+15Dodge\n4=Leave shop\n"))
                 if purchase ==1:
-                    if gold >=1:
-                        gold = gold-1
-                        hpBonus = hpBonus +5
+                    if gold >=3:
+                        gold = gold-3
+                        hpBonus = hpBonus +3
                         print("Purchased!")
                     else:
                         print("Not enough gold")
                 if purchase ==2:
                     if gold >=2:
                         gold = gold-2
-                        attackBonus = attackBonus +2
+                        attackBonus = attackBonus +1
                         print("Purchased!")
                     else:
                         print("Not enough gold")
@@ -183,6 +183,16 @@ def fight():
             enemy(Class,hpBonus,attackBonus,dodgeBonus,enemyHp,enemyDamages,enemyType,enemyChances)
             gold = gold + 3
         i=i+1
+
+    #Boss fight
+    print("You approach the defending champion... goodluck")
+    enemyHp=100
+    enemyDamages=[10,15,20]
+    enemyChances=[80,70,50]
+    enemy(Class,hpBonus,attackBonus,dodgeBonus,enemyHp,enemyDamages,enemyType,enemyChances)
+    print("you win!")
+    deathScreen() 
+
 ######################################################################    
 def mainMenu():
     ready = "no"
